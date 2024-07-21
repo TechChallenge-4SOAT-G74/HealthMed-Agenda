@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 
 namespace HealthMed_Agenda.Domain.Enums
 {
+    [ExcludeFromCodeCoverage]
     public enum ETipoAtendimento
     {
         [Description("Particular")]
@@ -10,6 +12,7 @@ namespace HealthMed_Agenda.Domain.Enums
         Concenio = 2,
     }
 
+    [ExcludeFromCodeCoverage]
     public static class ETipoAtendimentoExtensions
     {
         public static string ToDescriptionString(this ETipoAtendimento val)

@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 
 namespace HealthMed_Agenda.Domain.Enums
 {
+    [ExcludeFromCodeCoverage]
     public enum EModalidadeAtendimento
     {
         [Description("Presencial")]
@@ -10,6 +12,7 @@ namespace HealthMed_Agenda.Domain.Enums
         Teleatendimento = 2,
     }
 
+    [ExcludeFromCodeCoverage]
     public static class EModalidadeAtendimentoExtensions
     {
         public static string ToDescriptionString(this EModalidadeAtendimento val)

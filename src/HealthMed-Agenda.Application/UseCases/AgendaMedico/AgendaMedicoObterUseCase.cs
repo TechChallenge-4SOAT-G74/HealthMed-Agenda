@@ -2,9 +2,11 @@
 using HealthMed_Agenda.Application.UseCases.AgendaMedico.Dtos;
 using HealthMed_Agenda.Application.UseCases.AgendaMedico.Interfaces;
 using HealthMed_Agenda.Domain.Adapters;
+using System.Diagnostics.CodeAnalysis;
 
 namespace HealthMed_Agenda.Application.UseCases.AgendaMedico
 {
+    [ExcludeFromCodeCoverage]
     public class AgendaMedicoObterUseCase : IAgendaMedicoObterUseCase
     {
         private readonly IAgendaMedicoGateway _agendaMedicoGateway;

@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 
 namespace HealthMed_Agenda.Domain.Enums
 {
+    [ExcludeFromCodeCoverage]
     public enum EStatusAgenda
     {
         [Description("Aberta")]
@@ -14,6 +16,7 @@ namespace HealthMed_Agenda.Domain.Enums
         Confirmado = 4,
     }
 
+    [ExcludeFromCodeCoverage]
     public static class EStatusAgendaExtensions
     {
         public static string ToDescriptionString(this EStatusAgenda val)
