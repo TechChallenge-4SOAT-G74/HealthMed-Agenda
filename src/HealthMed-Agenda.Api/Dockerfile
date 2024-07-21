@@ -19,7 +19,7 @@ COPY ["HealthMed-Agenda.Tests/HealthMed-Agenda.Tests.csproj", "HealthMed-Agenda.
 
 RUN dotnet restore "./HealthMed-Agenda.Api/HealthMed-Agenda.Api.csproj"
 COPY . .
-WORKDIR "/src/HealthMed_Agenda.Api"
+WORKDIR "/src/HealthMed-Agenda.Api"
 RUN dotnet build "./HealthMed-Agenda.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
