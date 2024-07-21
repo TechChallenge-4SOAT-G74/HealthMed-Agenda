@@ -47,6 +47,6 @@ jobs:
           context: ./src
           file: src/HealthMed-Agenda.Api/Dockerfile  #Alterar para path do dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/HealthMed-Agenda:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/healthmed-agenda:latest
           secrets: |
             DOCKERHUB_TOKEN=${{ secrets.DOCKERHUB_TOKEN }}
