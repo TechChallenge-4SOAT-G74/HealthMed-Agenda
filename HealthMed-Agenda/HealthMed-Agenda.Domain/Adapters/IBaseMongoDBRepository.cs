@@ -1,0 +1,16 @@
+﻿namespace HealthMed_Agenda.Domain.Adapters
+{
+    public interface IBaseMongoDBRepository<TEntity> where TEntity : class
+    {
+        Task Create(TEntity obj);
+        void Update(TEntity obj);
+        void Delete(string id);
+        Task<TEntity> Get(string id);
+        Task<TEntity> GetValue(string column, string value);
+        Task<TEntity> GetValue(string column, int value);
+        Task<IEnumerable<TEntity>> GetAll();
+        Task<IEnumerable<TEntity>> GetList(string column, int value);
+        Task<IEnumerable<TEntity>> GetList(string column, string value);
+
+    }
+}
