@@ -6,9 +6,10 @@ name: Build and Push Docker Image to Docker Hub
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "dev", "main" ]
+    branches: [ "develop" ]
   pull_request:
-    branches: [ "dev", "main" ]
+    branches: [ "main" ]
+    
   workflow_dispatch:
     inputs:
       secret-name:
@@ -44,7 +45,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./src
-          file: src/HealthMed-Agenda.Api/Dockerfile
+          file: src/HealthMed-Agenda.Api/Dockerfile  #Alterar para path do dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/HealthMed-Agenda:latest
           secrets: |
