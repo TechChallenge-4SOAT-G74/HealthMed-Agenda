@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Healthmed-Agenda.Domain\HealthMed-Agenda.Domain.csproj" />
+    <ProjectReference Include="..\HealthMed-Agenda.Domain\HealthMed-Agenda.Domain.csproj" />
   </ItemGroup>
 
 </Project>
