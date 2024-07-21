@@ -1,0 +1,60 @@
+version: '3.4'
+
+services: 
+  mongodb:
+    image: mongo:latest
+    container_name: healthmeddb-mongodb
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_PASSWORD: mongo
+      MONGO_INITDB_DATABASE: HealthMedAgenda
+    ports:
+      - "27017:27017"
+    expose:
+      - "27017"
+    command: mongod --auth
+    volumes:
+      - 'healthmeddb-mongodb-volume:/data/db'
+    networks:
+      - healthmed-network
+  rabbitmq:
+    container_name: rabbitmq
+    tty: true
+    hostname: rabbitmq
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    image: rabbitmq:management
+    environment:
+      - RABBITMQ_DEFAULT_USER=user
+      - RABBITMQ_DEFAULT_PASS=password
+    volumes:
+      - rabbitmq:/rabbitmq
+    networks:
+      - healthmed-network 
+  healthmed-agenda.api:
+    image: ${DOCKER_REGISTRY-}healthmedagendaapi
+    volumes:
+      - 'healthmed-api-volume:/var/www/html'
+    build:
+      context: .
+      dockerfile: HealthMed-Agenda.Api/Dockerfile
+    ports:
+      - '8091:80'
+      - '5047:443'
+    restart: always 
+    depends_on:
+      - 'mongodb'
+      - 'rabbitmq'
+    networks:
+      - healthmed-network
+
+volumes:
+  healthmeddb-mongodb-volume:
+  rabbitmq:
+  healthmed-api-volume:
+
+networks:
+  healthmed-network:
+    driver: bridge
