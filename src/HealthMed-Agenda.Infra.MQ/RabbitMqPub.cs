@@ -20,7 +20,8 @@ namespace HealthMed_Agenda.Infra.MQ
                 Password = configuration.Value.Password,
                 VirtualHost = "/",
                 HostName = configuration.Value.Host,
-                Port = Int32.Parse(configuration.Value.Port)
+                Port = Int32.Parse(configuration.Value.Port),
+                Uri = new Uri($"amqp://{configuration.Value.UserName}:{configuration.Value.Password}@rabbitmq:5672/")
             };
 
             IConnection connection = factory.CreateConnection();

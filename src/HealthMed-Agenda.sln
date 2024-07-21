@@ -38,6 +38,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthMed-Agenda.Tests", "H
 		{D0C11305-030F-4410-AA37-4AC3ED19AC34} = {D0C11305-030F-4410-AA37-4AC3ED19AC34}
 	EndProjectSection
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1AEE58E6-F04A-4E5B-8795-E4DD37F6518A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,6 +74,10 @@ Global
 		{5DAC70E7-0FC5-4EEB-8B66-9734575120E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DAC70E7-0FC5-4EEB-8B66-9734575120E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DAC70E7-0FC5-4EEB-8B66-9734575120E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AEE58E6-F04A-4E5B-8795-E4DD37F6518A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AEE58E6-F04A-4E5B-8795-E4DD37F6518A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AEE58E6-F04A-4E5B-8795-E4DD37F6518A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AEE58E6-F04A-4E5B-8795-E4DD37F6518A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

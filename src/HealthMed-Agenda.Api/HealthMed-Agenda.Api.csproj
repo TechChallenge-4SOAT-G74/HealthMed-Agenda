@@ -7,6 +7,7 @@
     <RootNamespace>HealthMed_Agenda.Api</RootNamespace>
     <UserSecretsId>090e55c3-c705-45ce-8126-60b6700328af</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
