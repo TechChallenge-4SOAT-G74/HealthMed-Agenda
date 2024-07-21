@@ -13,7 +13,7 @@ COPY ["HealthMed-Agenda.Api/HealthMed-Agenda.Api.csproj", "HealthMed-Agenda.Api/
 COPY ["HealthMed-Agenda.Application/HealthMed-Agenda.Application.csproj", "HealthMed-Agenda.Application/"]
 COPY ["HealthMed-Agenda.Domain/HealthMed-Agenda.Domain.csproj", "HealthMed-Agenda.Domain/"]
 COPY ["HealthMed-Agenda.Infra.Gateway/HealthMed-Agenda.Infra.Gateway.csproj", "HealthMed-Agenda.Infra.Gateway/"]
-COPY ["HealthMed-AgendaInfra.MQ/HealthMed-Agenda.Infra.MQ.csproj", "HealthMed-Agenda.Infra.MQ/"]
+COPY ["HealthMed-Agenda.Infra.MQ/HealthMed-Agenda.Infra.MQ.csproj", "HealthMed-Agenda.Infra.MQ/"]
 COPY ["HealthMed-Agenda.Ioc/HealthMed-Agenda.Ioc.csproj", "HealthMed-Agenda.Ioc/"]
 COPY ["HealthMed-Agenda.Tests/HealthMed-Agenda.Tests.csproj", "HealthMed-Agenda.Tests/"]
 
