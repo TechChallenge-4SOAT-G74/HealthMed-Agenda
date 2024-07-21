@@ -9,24 +9,24 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["HealthMed_Agenda.Api/HealthMed_Agenda.Api.csproj", "HealthMed_Agenda.Api/"]
-COPY ["HealthMed_Agenda.Application/HealthMed_Agenda.Application.csproj", "HealthMed_Agenda.Application/"]
-COPY ["HealthMed_Agenda.Domain/HealthMed_Agenda.Domain.csproj", "HealthMed_Agenda.Domain/"]
-COPY ["HealthMed_Agenda.Infra.Gateway/HealthMed_Agenda.Infra.Gateway.csproj", "HealthMed_Agenda.Infra.Gateway/"]
-COPY ["HealthMed_AgendaInfra.MQ/HealthMed_Agenda.Infra.MQ.csproj", "HealthMed_Agenda.Infra.MQ/"]
-COPY ["HealthMed_Agenda.Ioc/HealthMed_Agenda.Ioc.csproj", "HealthMed_Agenda.Ioc/"]
-COPY ["HealthMed_Agenda.Tests/HealthMed_Agenda.Tests.csproj", "HealthMed_Agenda.Tests/"]
+COPY ["HealthMed-Agenda.Api/HealthMed-Agenda.Api.csproj", "HealthMed-Agenda.Api/"]
+COPY ["HealthMed-Agenda.Application/HealthMed-Agenda.Application.csproj", "HealthMed-Agenda.Application/"]
+COPY ["HealthMed-Agenda.Domain/HealthMed-Agenda.Domain.csproj", "HealthMed-Agenda.Domain/"]
+COPY ["HealthMed-Agenda.Infra.Gateway/HealthMed-Agenda.Infra.Gateway.csproj", "HealthMed-Agenda.Infra.Gateway/"]
+COPY ["HealthMed-AgendaInfra.MQ/HealthMed-Agenda.Infra.MQ.csproj", "HealthMed-Agenda.Infra.MQ/"]
+COPY ["HealthMed-Agenda.Ioc/HealthMed-Agenda.Ioc.csproj", "HealthMed-Agenda.Ioc/"]
+COPY ["HealthMed-Agenda.Tests/HealthMed-Agenda.Tests.csproj", "HealthMed-Agenda.Tests/"]
 
-RUN dotnet restore "./HealthMed_Agenda.Api/HealthMed_Agenda.Api.csproj"
+RUN dotnet restore "./HealthMed-Agenda.Api/HealthMed-Agenda.Api.csproj"
 COPY . .
 WORKDIR "/src/HealthMed_Agenda.Api"
-RUN dotnet build "./HealthMed_Agenda.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "./HealthMed-Agenda.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./HealthMed_Agenda.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./HealthMed-Agenda.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "HealthMed_Agenda.Api.dll"]
+ENTRYPOINT ["dotnet", "HealthMed-Agenda.Api.dll"]

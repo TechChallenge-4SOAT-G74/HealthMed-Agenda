@@ -3,7 +3,6 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace HealthMed_Agenda.Domain.Enums
 {
-    [ExcludeFromCodeCoverage]
     public enum EConvenio
     {
         [Description("Amil")]
