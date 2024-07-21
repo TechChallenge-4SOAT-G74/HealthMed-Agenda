@@ -22,7 +22,7 @@ on:
         required: true
       repo-name:
         description: 'Repo Name'
-        default: HealthMed-Agenda
+        default: healthmed-agenda
         required: true
         
 jobs:
