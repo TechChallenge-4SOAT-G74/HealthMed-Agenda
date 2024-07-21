@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HealthMed-Agenda.Application\HealthMed-Agenda.Application.csproj" />
-    <ProjectReference Include="..\Healthmed-Agenda.Domain\HealthMed-Agenda.Domain.csproj" />
+    <ProjectReference Include="..\HealthMed-Agenda.Domain\HealthMed-Agenda.Domain.csproj" />
     <ProjectReference Include="..\HealthMed-Agenda.Infra.Gateway\HealthMed-Agenda.Infra.Gateway.csproj" />
     <ProjectReference Include="..\HealthMed-Agenda.Infra.MQ\HealthMed-Agenda.Infra.MQ.csproj" />
   </ItemGroup>
