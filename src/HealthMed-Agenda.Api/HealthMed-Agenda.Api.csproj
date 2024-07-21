@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>HealthMed_Agenda.Api</RootNamespace>
+    <UserSecretsId>090e55c3-c705-45ce-8126-60b6700328af</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.7" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.3" />
+    <PackageReference Include="MongoDB.Driver" Version="2.27.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore.ReDoc" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HealthMed-Agenda.Infra.Gateway\HealthMed-Agenda.Infra.Gateway.csproj" />
+    <ProjectReference Include="..\HealthMed-Agenda.Infra.MQ\HealthMed-Agenda.Infra.MQ.csproj" />
+    <ProjectReference Include="..\HealthMed-Agenda.Ioc\HealthMed-Agenda.Ioc.csproj" />
+  </ItemGroup>
+
+</Project>
