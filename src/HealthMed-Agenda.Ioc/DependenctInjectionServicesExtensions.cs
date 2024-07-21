@@ -44,6 +44,7 @@ namespace HealthMed_Agenda.Ioc
         }
     }
 
+    [ExcludeFromCodeCoverage]
     public static class AssemblyExtentions
     {
         public static IEnumerable<Type> GetNoAbstractTypes(this Assembly assemblyFile)

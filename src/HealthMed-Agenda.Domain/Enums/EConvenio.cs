@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 
 namespace HealthMed_Agenda.Domain.Enums
 {
@@ -14,6 +15,7 @@ namespace HealthMed_Agenda.Domain.Enums
         Intermédica = 2,
     }
 
+    [ExcludeFromCodeCoverage]
     public static class EConvenioExtensions
     {
         public static string ToDescriptionString(this EConvenio val)

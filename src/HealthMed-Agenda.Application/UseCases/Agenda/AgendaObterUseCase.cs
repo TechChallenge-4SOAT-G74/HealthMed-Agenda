@@ -2,10 +2,12 @@
 using HealthMed_Agenda.Application.UseCases.Agenda.Dtos;
 using HealthMed_Agenda.Application.UseCases.Agenda.Interfaces;
 using HealthMed_Agenda.Domain.Adapters;
+using System.Diagnostics.CodeAnalysis;
 using AgendaEntity = HealthMed_Agenda.Domain.Entities.Agenda;
 
 namespace HealthMed_Agenda.Application.UseCases.Agenda
 {
+    [ExcludeFromCodeCoverage]
     public class AgendaObterUseCase(IAgendaGateway agendaGateway) : IAgendaObterUseCase
     {
         private readonly IAgendaGateway _agendaGateway = agendaGateway;

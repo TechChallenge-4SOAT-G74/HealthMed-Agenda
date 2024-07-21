@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthMed-Agenda.Api", "Hea
 		{D0C11305-030F-4410-AA37-4AC3ED19AC34} = {D0C11305-030F-4410-AA37-4AC3ED19AC34}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthMed-Agenda.Domain", "Healthmed-Agenda.Domain\HealthMed-Agenda.Domain.csproj", "{D0C11305-030F-4410-AA37-4AC3ED19AC34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthMed-Agenda.Domain", "HealthMed-Agenda.Domain\HealthMed-Agenda.Domain.csproj", "{D0C11305-030F-4410-AA37-4AC3ED19AC34}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthMed-Agenda.Ioc", "HealthMed-Agenda.Ioc\HealthMed-Agenda.Ioc.csproj", "{6F483B20-DCE4-4E34-91D2-51C79E33FF0A}"
 	ProjectSection(ProjectDependencies) = postProject
