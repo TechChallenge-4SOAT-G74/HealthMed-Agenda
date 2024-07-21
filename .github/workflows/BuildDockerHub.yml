@@ -21,7 +21,7 @@ on:
         required: true
       repo-name:
         description: 'Repo Name'
-        default: HealthMed-Agenda
+        default: healthmed-agenda
         required: true
         
 jobs:
@@ -46,6 +46,6 @@ jobs:
           context: ./src
           file: src/HealthMed-Agenda.Api/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/HealthMed-Agenda:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/healthmed-agenda:latest
           secrets: |
             DOCKERHUB_TOKEN=${{ secrets.DOCKERHUB_TOKEN }}
