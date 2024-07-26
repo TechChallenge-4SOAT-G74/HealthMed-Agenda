@@ -26,7 +26,6 @@ namespace HealthMed_Agenda.Application.UseCases.Agenda
                 agenda.Paciente.DataNascimento = dto.DataNascimento;
                 agenda.Paciente.Telefone = new TelefoneVo(dto.DDD, dto.Telefone);
                 agenda.Paciente.Email = new EmailVo(dto.Email);
-                agenda.ModalidadeAtendimento = dto.ModalidadeAtendimento;
                 agenda.Convenio = dto.Convenio;
                 agenda.TipoAtendimento = dto.TipoAtendimento;
                 agenda.Observacao = dto.Observacao;

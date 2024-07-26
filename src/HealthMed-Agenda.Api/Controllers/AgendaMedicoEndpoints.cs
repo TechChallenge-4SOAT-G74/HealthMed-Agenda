@@ -35,6 +35,13 @@ public static class AgendaMedicoEndpoints
         .WithName("AtualizarAgendaMedico")
         .WithOpenApi();
 
+        group.MapPut("confirmaorcancelaagendamedico/{id}", async ([FromServices] IAgendaMedicoAtualizarUseCase useCase, string id) =>
+        {
+            return Results.Ok(await useCase.ConfirmaCancelaAgendamento(id));
+        })
+        .WithName("ConfirmaAgendaMedico")
+        .WithOpenApi();
+
         group.MapPost("criaragendamedico/", async ([FromServices] IAgendaMedicoCriarUseCase useCase, [FromBody] AgendaMedicoDto dto) =>
         {
             return Results.Ok(await useCase.CriarAgendaMedico(dto));

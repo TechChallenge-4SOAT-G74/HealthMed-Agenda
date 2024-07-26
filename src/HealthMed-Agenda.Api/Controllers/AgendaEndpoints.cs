@@ -27,6 +27,13 @@ public static class AgendaEndpoints
         .WithName("ConsultarAgendamentoMedico")
         .WithOpenApi();
 
+        group.MapGet("consultaagendamentomedicopordistancia/{localidadePaciente}", async ([FromServices] IAgendaObterUseCase useCase, string localidadePaciente) =>
+        {
+            return Results.Ok(await useCase.ConsultarAgendaMedicoPorDistancia(localidadePaciente));
+        })
+        .WithName("ConsultarAgendaMedicoPorDistancia")
+        .WithOpenApi();
+
         group.MapGet("consultaragendamentos", async ([FromServices] IAgendaObterUseCase useCase) =>
         {
             return Results.Ok(await useCase.ConsultarAgendamentos());

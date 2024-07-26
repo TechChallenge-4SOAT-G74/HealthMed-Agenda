@@ -13,6 +13,8 @@ namespace HealthMed_Agenda.Domain.Enums
         Agendado = 3,
         [Description("Confirmado")]
         Confirmado = 4,
+        [Description("Cancelado")]
+        Cancelado = 5,
     }
 
     [ExcludeFromCodeCoverage]

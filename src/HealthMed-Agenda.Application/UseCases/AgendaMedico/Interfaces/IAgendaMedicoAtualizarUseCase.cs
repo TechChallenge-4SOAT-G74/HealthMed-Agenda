@@ -6,5 +6,6 @@ namespace HealthMed_Agenda.Application.UseCases.AgendaMedico.Interfaces
     public interface IAgendaMedicoAtualizarUseCase
     {
         Task<ServiceResult> AtualizarCalendario(string id, Calendario calendario);
+        Task<ServiceResult> ConfirmaCancelaAgendamento(string id);
     }
 }

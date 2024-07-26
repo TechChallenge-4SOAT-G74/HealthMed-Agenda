@@ -4,7 +4,6 @@
     {
         public virtual AgendaMedico? AgendaMedico { get; set; }
         public virtual Paciente? Paciente { get; set; }
-        public string? ModalidadeAtendimento { get; set; }
         public string? Convenio { get; set; }
         public string? TipoAtendimento { get; set; }
         public virtual string? Status { get; set; }

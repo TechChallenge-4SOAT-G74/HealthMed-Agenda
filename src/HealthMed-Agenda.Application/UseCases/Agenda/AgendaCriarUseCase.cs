@@ -2,7 +2,6 @@
 using HealthMed_Agenda.Application.UseCases.Agenda.Dtos;
 using HealthMed_Agenda.Application.UseCases.Agenda.Interfaces;
 using HealthMed_Agenda.Domain.Adapters;
-using HealthMed_Agenda.Domain.Enums;
 using HealthMed_Agenda.Domain.ValuesObjects;
 using System.Security.Cryptography;
 using AgendaEntity = HealthMed_Agenda.Domain.Entities.Agenda;
@@ -42,16 +41,12 @@ namespace HealthMed_Agenda.Application.UseCases.Agenda
                         Telefone = new TelefoneVo(dto.DDD, dto.Telefone),
                         Email = new EmailVo(dto.Email)
                     },
-                    ModalidadeAtendimento = dto.ModalidadeAtendimento,
                     Convenio = dto.Convenio,
                     TipoAtendimento = dto.TipoAtendimento,
                     Observacao = dto.Observacao,
-                    Status = dto.Status
+                    Status = dto.Status,
+                    LinkTeleAtendimento = GerarLinkTeleAtendimento
                 };
-
-                if (dto.ModalidadeAtendimento == EModalidadeAtendimento.Teleatendimento.ToDescriptionString())
-                    agenda.LinkTeleAtendimento = GerarLinkTeleAtendimento;
-
 
                 await _agendaGateway.Create(agenda);
 
