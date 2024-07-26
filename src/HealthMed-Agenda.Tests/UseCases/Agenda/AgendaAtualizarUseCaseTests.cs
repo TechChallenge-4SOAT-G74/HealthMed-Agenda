@@ -48,7 +48,6 @@ namespace HealthMed_Agenda.Tests.UseCases.Agenda
                     Telefone = new TelefoneVo("11", "999991234"),
                     Email = new EmailVo("john.doe@example.com")
                 },
-                ModalidadeAtendimento = "Modalidade",
                 Convenio = "Convenio",
                 TipoAtendimento = "Tipo",
                 Observacao = "Observacao",

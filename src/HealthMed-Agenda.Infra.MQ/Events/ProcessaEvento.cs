@@ -25,7 +25,6 @@ namespace HealthMed_Agenda.Infra.MQ.Events
                 MedicoNome = medicoRead?.MedicoNome,
                 MedicoRegistro = medicoRead?.MedicoRegistro,
                 MedicoEspecialidade = medicoRead?.MedicoEspecialidade,
-                ModalidadeAtendimentos = medicoRead?.ModalidadeAtendimentos,
                 TipoAtendimentos = medicoRead?.TipoAtendimentos,
                 Convenios = medicoRead?.Convenios,
                 Ativo = medicoRead.Ativo

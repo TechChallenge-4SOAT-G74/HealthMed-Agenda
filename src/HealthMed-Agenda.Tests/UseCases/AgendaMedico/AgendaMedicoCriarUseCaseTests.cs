@@ -46,7 +46,6 @@ namespace HealthMed_Agenda.Tests.UseCases.AgendaMedico
                 MedicoNome = "John Doe",
                 MedicoRegistro = "12345",
                 TipoAtendimentos = ["Consulta"],
-                ModalidadeAtendimentos = ["Presencial"],
                 Convenios = ["convenio"],
             };
 
@@ -86,7 +85,6 @@ namespace HealthMed_Agenda.Tests.UseCases.AgendaMedico
                 MedicoNome = dto.MedicoNome,
                 MedicoEspecialidade = dto.MedicoEspecialidade,
                 MedicoRegistro = dto.MedicoRegistro,
-                ModalidadeAtendimentos = dto.ModalidadeAtendimentos,
                 TipoAtendimentos = dto.TipoAtendimentos,
                 Convenios = dto.Convenios,
                 Ativo = dto.Ativo

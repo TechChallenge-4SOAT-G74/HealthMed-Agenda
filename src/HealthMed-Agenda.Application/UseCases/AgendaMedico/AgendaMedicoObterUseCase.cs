@@ -82,7 +82,6 @@ namespace HealthMed_Agenda.Application.UseCases.AgendaMedico
                     MedicoNome = item.Medico?.MedicoNome,
                     MedicoEspecialidade = item.Medico?.MedicoEspecialidade,
                     MedicoRegistro = item.Medico?.MedicoRegistro,
-                    ModalidadeAtendimentos = item.Medico?.ModalidadeAtendimentos,
                     TipoAtendimentos = item.Medico?.TipoAtendimentos,
                     Convenios = item.Medico?.Convenios,
                     Calendario = item.Calendario

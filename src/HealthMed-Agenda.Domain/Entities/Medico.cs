@@ -6,7 +6,6 @@
         public virtual string? MedicoNome { get; set; }
         public virtual string? MedicoEspecialidade { get; set; }
         public virtual string? MedicoRegistro { get; set; }
-        public virtual List<string>? ModalidadeAtendimentos { get; set; }
         public virtual List<string>? TipoAtendimentos { get; set; }
         public virtual List<string>? Convenios { get; set; }
         public virtual bool Ativo { get; set; }

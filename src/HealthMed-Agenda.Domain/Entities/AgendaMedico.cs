@@ -4,5 +4,6 @@
     {
         public virtual Medico? Medico { get; set; }
         public virtual Calendario? Calendario { get; set; }
+        public virtual string? Geolocalizacao { get; set; }
     }
 }

@@ -89,6 +89,29 @@ namespace HealthMed_Agenda.Application.UseCases.Agenda
             return result;
         }
 
+        public async Task<ServiceResult<List<AgendamentoDto>>> ConsultarAgendaMedicoPorDistancia(string localidadePaciente)
+        {
+            var result = new ServiceResult<List<AgendamentoDto>>();
+            try
+            {
+                var agenda = await _agendaGateway.GetList("AgendaMedico.Geolocallizacao", localidadePaciente);
+
+                if (agenda == null || !agenda.Any())
+                {
+                    result.AddError("Agendamento não localizada");
+                    return result;
+                }
+
+                List<AgendamentoDto> listaAgenda = GeraAgendaDto(agenda);
+                result.Data = listaAgenda;
+
+            }
+            catch (Exception ex)
+            {
+                result.AddError(ex.Message);
+            }
+            return result;
+        }
         private static List<AgendamentoDto> GeraAgendaDto(IEnumerable<AgendaEntity> agenda)
         {
             var listaAgenda = new List<AgendamentoDto>();
@@ -107,7 +130,6 @@ namespace HealthMed_Agenda.Application.UseCases.Agenda
                     DataNascimento = item.Paciente?.DataNascimento,
                     Telefone = $"({item.Paciente?.Telefone?.DDD}) {item.Paciente?.Telefone?.Numero}",
                     Email = item.Paciente?.Email?.Endereco,
-                    ModalidadeAtendimento = item.ModalidadeAtendimento,
                     Convenio = item.Convenio,
                     Status = item.Status,
                     Observacao = item.Observacao,
