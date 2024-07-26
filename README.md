@@ -26,9 +26,11 @@ com as dados que permita o cadastramento da agenda do médico.
 
 O sistema de agenda permitirá que o médico cadastre sua agenda de consultas
 em um calendário. E permite que o assistente do médico ou o paciente agente uma 
-consulta após localizar o médico pela sua especialidade, nome ou registro. 
-Após o agendamento da consulta, ocorre o envio de notificação para o paciente 
-através de envio de email.
+consulta após localizar o médico pela sua especialidade, nome, registro ou distância. 
+Após o agendamento da consulta, o médico pode confirmar ou cancelar a consulta. 
+Após a ação do médico, ocorre o envio de notificação para o paciente 
+através de envio de email com a confirmação e o link para a consulta o a notificação 
+do cancelamento.
 
 O sistema de consulta permitirá que o médico interaja com o paciente presencialmente
 ou por teleatendimento. Além de efetuar a validação do convênio médico do paciente 
